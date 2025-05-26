@@ -1,0 +1,35 @@
+# Ignore Gradle project-specific cache directory
+.gradle/
+
+# Ignore Gradle build output directory
+build/
+app/build/
+
+# Ignore Kotlin-specific cache
+.kotlin/
+
+# Ignore IDE project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore generated wrapper JARs
+gradle/wrapper/gradle-wrapper.jar
+
+# Ignore local environment files
+local.properties
+
+# Ignore test reports and results
+**/test-results/
+**/reports/
+
+# Ignore generated resources (if any)
+**/gen/
