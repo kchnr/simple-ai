@@ -6,6 +6,8 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+import org.gradle.api.tasks.testing.Test
+
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.kotlin.jvm)
@@ -21,14 +23,9 @@ repositories {
     mavenCentral()
 }
 
-testing {
-    suites {
-        // Configure the built-in test suite
-        val test by getting(JvmTestSuite::class) {
-            // Use Kotlin Test test framework
-            useKotlinTest("2.1.20")
-        }
-    }
+// Configure JUnit Platform for all test tasks
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -45,4 +42,9 @@ application {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.0")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:2.1.20")
+
+    // Kotest framework
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:5.9.1")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:5.9.1")
 }

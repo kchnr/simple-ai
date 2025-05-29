@@ -30,6 +30,3 @@ local.properties
 # Ignore test reports and results
 **/test-results/
 **/reports/
-
-# Ignore generated resources (if any)
-**/gen/
