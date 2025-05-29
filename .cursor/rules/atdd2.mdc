@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+For each Given/When/Then step, YOU MUST create a binding that calls a public interface (even if it yet doesn't exist). Bindings contain no business logic—just delegation. Missing interfaces highlight what to build. Tests should still fail here. 

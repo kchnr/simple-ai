@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST run the tests. If there are multiple failing tests choose only one failing test to fix and no more, until it is fixed.

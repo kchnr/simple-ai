@@ -6,14 +6,20 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
+import org.gradle.api.tasks.testing.Test
+import org.gradle.plugins.ide.idea.model.IdeaLanguageLevel
+
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    alias(libs.plugins.kotlin.jvm)
-
+    id("org.jetbrains.kotlin.jvm") version "2.2.0"
+    
     // Apply the application plugin to add support for building a CLI application in Java.
     application
 
-    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.20"
+    // Apply the idea plugin to generate IDEA project files.
+    idea
+
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.2.0"
 }
 
 repositories {
@@ -21,20 +27,15 @@ repositories {
     mavenCentral()
 }
 
-testing {
-    suites {
-        // Configure the built-in test suite
-        val test by getting(JvmTestSuite::class) {
-            // Use Kotlin Test test framework
-            useKotlinTest("2.1.20")
-        }
-    }
+// Configure JUnit Platform for all test tasks
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(23)
+        languageVersion = JavaLanguageVersion.of(24)
     }
 }
 
@@ -44,5 +45,14 @@ application {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.1")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:2.2.0")
+
+    // SLF4J + Logback for logging
+    implementation("org.slf4j:slf4j-api:1.7.36")
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+
+    // Kotest framework
+    testImplementation("io.kotest:kotest-runner-junit5-jvm:5.9.1")
+    testImplementation("io.kotest:kotest-assertions-core-jvm:5.9.1")
 }

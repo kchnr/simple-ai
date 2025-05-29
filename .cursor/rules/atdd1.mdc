@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST Define a single extra Acceptance Test for a User Story - if a User Story was not given YOU MUST warn. YOU MUST write NO MORE THAN ONE acceptance test before writing any code. Express only external behavior in “Given–When–Then” form, one behavior for this test. Test MUST fail initially - these tests SHOULD NOT CONTAIN ANY TECHNICAL DETAILS INITIALLY. If no "Given-When-Then" framework exists just write the test using this style + adding comments.

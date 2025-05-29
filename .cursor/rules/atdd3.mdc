@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Implement Code. Write the tiniest possible production code to make the tests pass—no extras. Focus on correctness. Stop immediately once all tests pass. Never write code except to satisfy a failing acceptance test.

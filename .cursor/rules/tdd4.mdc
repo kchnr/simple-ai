@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST pick exactly one test to improve / refactor  without changing its semantics. YOU SHALL apply that test refactor, then run the full suite. If no further test cleanup is needed, declare “Tests are all clean and up-to-date". Refactoring: clean up assertions, remove duplication, use existing utilities or reusing code on this test looking across the codebase.

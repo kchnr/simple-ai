@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST consider this last working session, and review all related tests - we want to make sure tests are their respective levels are testing the right things at the right abstractions, make sure we consider any possible improvements and refactors to keep tests clean and easy to read. Don't forget that tests also serve the purpose of documenting behavior. YOU MUST give your assessment given this context.

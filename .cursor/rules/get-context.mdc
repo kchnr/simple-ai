@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST RUN `fd` to understand project structure, nothing else. You MUST read markdown and documentation files. You MUST read dependency files (e.g.: package.json, toml files, pyproject.toml, etc). YOU MUST read task files (e.g. Makefile, etc).

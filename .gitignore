@@ -31,5 +31,5 @@ local.properties
 **/test-results/
 **/reports/
 
-# Ignore generated resources (if any)
-**/gen/
+# Env
+.env

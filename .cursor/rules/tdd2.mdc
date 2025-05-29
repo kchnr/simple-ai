@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST write the minimum amount of code required to make that single test pass—unless you need to adjust a signature. YOU DO NOT modify any other tests or introduce extra functionality. If no more tests are required YOU MUST run all tests and work chose NO MORE than a single failing test to fix and YOU MUST ignore the non choosen tests until the choosen one is fixed.

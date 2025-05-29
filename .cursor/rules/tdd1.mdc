@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+YOU MUST Write NO MORE THAN ONE unit test before writing any code, the unit test should focus on one case only. Test must fail initially. If it makese no sense to write a unit test now YOU MUST warn. Once done YOU MUST STOP, expected result is a failing test.
