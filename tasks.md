@@ -111,11 +111,10 @@ _(This section retains key questions that guide ongoing research and exploration
     -   [ ] Write initial unit tests for `SimpleEvolution.kt` population initialization and a single generation step.
     -   [ ] Write initial unit tests for `SequencePredictionTask.kt` sequence generation and basic evaluation.
 -   [ ] Review and enhance basic logging (`ConsoleLogger.kt`) for clarity and utility during evolution runs.
--   [ ] Verify version control practices (Git, `.gitignore`, `.gitattributes`) are sound.
--   [ ] **Consolidate Data Structures:**
-    -   [ ] Remove the `Neuron.kt`, `Connection.kt`, and `ActivationFunctionType.kt` files from the `app/src/main/kotlin/gen/ai/core/network/` directory.
-    -   [ ] Ensure all project code exclusively uses the data structures defined in `gen.ai/Genome.kt` (e.g., `gen.ai.Neuron`, `gen.ai.Connection`) and `gen.ai/ActivationFunction.kt`.
-    -   [ ] Update any affected imports or logic, particularly if `EvolutionDemo.kt` or tests were referencing the `core.network` versions.
+-   [x] Verify version control practices (Git, `.gitignore`, `.gitattributes`) are sound.
+-   [x] Remove the `Neuron.kt`, `Connection.kt`, and `ActivationFunctionType.kt` files from the `app/src/main/kotlin/gen/ai/core/network/` directory.
+-   [x] Ensure all project code exclusively uses the data structures defined in `gen.ai/Genome.kt` (e.g., `gen.ai.Neuron`, `gen.ai.Connection`) and `gen.ai/ActivationFunction.kt`.
+-   [x] Update any affected imports or logic, particularly if `EvolutionDemo.kt` or tests were referencing the `core.network` versions.
 
 #### Refine Foundational Data Structures & Genome (MVP)
 
@@ -130,18 +129,25 @@ _(This section retains key questions that guide ongoing research and exploration
 
 -   [ ] Review and refine `NeuralNetwork` class based on the `Genome` structure.
     -   [ ] Ensure efficient data structures are used internally for neuron states, outputs, and connection weights (current `MutableMap` usage is acceptable for MVP).
--   [ ] Verify network activation propagation in `NeuralNetwork.kt` (`step` function, topological processing).
+-   [x] Verify network activation propagation in `NeuralNetwork.kt` (`step` function, topological processing).
     -   [x] **P0: CRITICAL FIX** - Address "Warning: Some neurons could not be processed" from `runEvolutionDemo`. Implement a more robust neuron update order in `NeuralNetwork.step()` to handle various network topologies correctly.
-    -   [ ] Test with feed-forward, recurrent, and self-connections.
--   [ ] Implement and test the chosen fixed Hebbian-like plasticity rule within `NeuralNetwork.kt`'s `updatePlasticity` method.
-    -   [ ] Ensure connection weights are updated based on their `learningRate` (or equivalent `eta`) and pre/post synaptic activity.
-    -   [ ] Add specific tests for plasticity updates.
+    -   [x] Test with feed-forward, recurrent, and self-connections.
+-   [x] Implement and test the chosen fixed Hebbian-like plasticity rule within `NeuralNetwork.kt`'s `updatePlasticity` method.
+    -   [x] Ensure connection weights are updated based on their `learningRate` (or equivalent `eta`) and pre/post synaptic activity.
+    -   [x] Add specific tests for plasticity updates.
 
 #### Refine Evolutionary Algorithm Engine (MVP)
 
 -   [ ] **Establish Core Evolutionary Pipeline Structure:**
-    -   [ ] Conceptualize overall data flow: Gene Loading (future) -> Population Initialization -> Genotype-to-Phenotype Mapping (`Genome` to `NeuralNetwork`) -> Task-Based Evaluation -> Selection/Reproduction.
-    -   [ ] **Genome Persistence (Future Task - Document Only):** Add placeholder/note for future task: Load existing offspring genomes (e.g., from a file/database if evolution is paused/resumed). For MVP, focus on in-memory evolution from a random start.
+    -   [x] Create `docs/pipeline.md` to diagram and describe the end-to-end dataflow:  
+             • Genome sourcing (random or load from storage)  
+             • Genotype→Phenotype mapping (building `NeuralNetwork` instances)  
+             • Task evaluation (using `SequencePredictionTask`)  
+             • Selection & reproduction operators (tournament, crossover, mutation)  
+             • Population output and optional persistence
+    -   [ ] Define Kotlin interfaces in `gen.ai.pipeline` for each pipeline stage (`GenomeSource`, `PhenotypeBuilder`, `Evaluator`, `Selector`, `Reproducer`, `PipelineRunner`).
+    -   [ ] Implement `SimplePipelineRunner` wiring existing `SimpleEvolution`, `NeuralNetwork`, and `SequencePredictionTask` into a cohesive pipeline.
+    -   [ ] Write an integration test ensuring a trivial genome goes through the pipeline and returns a new population.
 -   [ ] Review and refine the `SimpleEvolution.kt` Genetic Algorithm loop:
     -   [ ] Population initialization (current random genome creation is a good start).
     -   [ ] Fitness evaluation (delegates to `SequencePredictionTask.kt`).
@@ -174,6 +180,7 @@ _(This section retains key questions that guide ongoing research and exploration
 -   [ ] Refine `EvolutionDemo.kt` (`runEvolutionDemo` function) to run the complete evolutionary loop.
 -   [ ] Enhance logging in `EvolutionDemo.kt`: generation number, best fitness, average fitness, diversity metrics (e.g., average genome size, number of active plastic components).
 -   [ ] Develop tools or methods to manually inspect evolved genomes/phenotypes that show adaptation (e.g., serialize best genome, visualize its structure or activity).
+-   [ ] Develop analysis to detect and visualize emergent inhibitory autapses (self-connections) and quantify their effect on network timing and dynamics.
 -   **Goal:** Observe if plasticity parameters evolve meaningfully and if networks demonstrably change their output correctly after a dynamic task switch, using the existing demo as a starting point.
 
 ### Phase 2: Enhancing Core Capabilities & Robustness - Local CPU Focus
