@@ -27,4 +27,4 @@ This document describes the high-level components and dataflow of the BrainScale
 
 -   Add persistence layers for checkpointing and resuming evolution.
 -   Integrate new stages for speciation or multi-objective ranking.
--   Plug in alternative evaluators for different tasks.
+-   Plug in alternative evaluators for different tasks. 
