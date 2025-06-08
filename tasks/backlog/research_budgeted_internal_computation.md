@@ -1,0 +1,2 @@
+USER STORY: Research Budgeted Internal Computation
+As a Developer, I want to explore how a fixed compute cycle budget per evaluation can pressure brains to balance internal loops versus speed so that recurrent and memory-based solutions emerge. 

@@ -48,36 +48,42 @@
 ## Task Priority Queue
 *(The tasks are listed in priority order; remove the top item when starting work; manual renumbering is no longer required.)*
 
-- `emergent_stp_effects.md`
-- `emergent_refractory_period.md`
-- `activation_function_primitives_impact.md`
-- `minimal_neuromodulation_effect.md`
-- `validate_adaptation_fitness_function.md`
-- `minimal_task_for_structural_change.md`
+- `initial_simple_tasks_suite.md`
+- `generic_input_interface.md`
+- `research_task_suite_taxonomy.md`
+- `research_sensor_actuator_taxonomy.md`
+- `research_evolving_senses_and_sensor_masks.md`
+- `research_evolving_actuators_and_actuator_masks.md`
+- `research_specialist_vs_generalist_tradeoff.md`
+- `research_cost_model.md`
+- `research_budgeted_internal_computation.md`
+- `research_curriculum_rule.md`
+- `draft_genome_schema_with_sensor_actuator_masks.md`
+- `curriculum_task_difficulty_framework.md`
+- `time_budgeted_recurrent_loop.md`
+- `damage_resilience_challenge.md`
 - `fix_network_activation_propagation.md`
 - `verify_project_structure.md`
 - `verify_testing_framework.md`
-- `migrate_logging_to_slf4j.md`
 - `verify_version_control.md`
+- `migrate_logging_to_slf4j.md`
 - `remove_old_network_files.md`
-- `ensure_genome_activationfunction_use.md`
 - `audit_domain_class_placement.md`
+- `ensure_genome_activationfunction_use.md`
 - `refine_neuron_dataclass.md`
 - `refine_connection_dataclass.md`
 - `refine_genome_dataclass_serialization.md`
 - `implement_hebbian_plasticity.md`
-- `refine_fitness_function_for_adaptation.md`
-- `refine_neuralnetwork_class.md`
 - `implement_simplepipelinerunner.md`
-- `refine_simpleevolution_loop.md`
+- `refine_neuralnetwork_class.md`
 - `refine_evaluation_loop_and_task.md`
+- `refine_simpleevolution_loop.md`
 - `refine_evolutiondemo_logging.md`
 - `develop_genome_inspection_tools.md`
-- `analyze_inhibitory_autapses.md`
-- `observe_validate_plasticity_evolution.md`
-- `synaptic_pruning_threshold_experiment.md`
-- `neurogenesis_integration_experiment.md`
-- `genetic_algorithm_plasticity_comparison_experiment.md`
+- `explore_meta_encoding.md`
+- `performance_profiling_benchmarking.md`
+- `containerization_deployment_planning.md`
+- `parallel_distributed_evaluation_exploration.md`
 
 ---
 
@@ -85,7 +91,7 @@
 *(List of tasks currently in `tasks/in-progress/<brief-title>.md`. Tasks are moved here from the Priority Queue.)*
 *(This list should be updated when a task's status changes.)*
 
-1. `generic_experiments_project_template.md`
+*(No tasks currently in progress)*
 
 ---
 

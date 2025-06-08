@@ -1,0 +1,2 @@
+USER STORY: Research Specialist vs. Generalist Trade-Off
+As a Developer, I want to study the conditions under which genomes evolve as specialists versus generalists so that I can understand task-selection pressures for input/output resource allocation. 

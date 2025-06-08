@@ -1,0 +1,2 @@
+USER STORY: Specify Energy & Time Cost Model
+As a Developer, I want to define a cost model for sensor activation, actuator use, and computation so that the GA can trade off performance versus resource use. 

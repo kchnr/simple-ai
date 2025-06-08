@@ -1,0 +1,2 @@
+USER STORY: Draft Genome Schema with Sensor & Actuator Masks
+As a Developer, I want to design a genome schema that includes sensor and actuator mask genes so that evolution can determine which inputs and outputs a brain uses. 

@@ -1,0 +1,2 @@
+USER STORY: Research Evolving Actuators & Actuator Masks
+As a Developer, I want to investigate how genomes can evolve which actuators to drive so that only necessary output channels are used by a brain. 

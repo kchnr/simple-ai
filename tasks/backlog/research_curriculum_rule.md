@@ -1,0 +1,2 @@
+USER STORY: Research Curriculum Progression Rule
+As a Developer, I want to sketch rules for unlocking progressively harder tasks when brains achieve competency so that evolution can scale complexity automatically. 

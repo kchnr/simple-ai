@@ -1,0 +1,2 @@
+USER STORY: Research Task Suite Taxonomy
+As a Developer, I want to define and categorize an initial suite of simple tasks by complexity so that I can validate the GA's ability to solve incrementally harder challenges. 

@@ -1,0 +1,2 @@
+USER STORY: Research Sensor & Actuator Taxonomy
+As a Developer, I want to define a taxonomy of sensor modalities and actuator primitives so that genomes can evolve which inputs and outputs to use for different tasks. 
